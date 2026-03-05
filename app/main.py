@@ -2,7 +2,9 @@ from typing import List
 
 
 class Animal:
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(
+        self, name: str, appetite: int, is_hungry: bool = True
+    ) -> None:
         self.name: str = name
         self.appetite: int = appetite
         self.is_hungry: bool = is_hungry
@@ -12,8 +14,9 @@ class Animal:
 
     def feed(self) -> int:
         if self.is_hungry:
-            msg = f"Eating {self.appetite} food points..."
-            print(msg)
+            print(
+                f"Eating {self.appetite} food points..."
+            )
             self.is_hungry = False
             return self.appetite
         return 0
